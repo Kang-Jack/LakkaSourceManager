@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Threading;
 
 namespace Console
 {
@@ -8,16 +9,18 @@ namespace Console
     {
         static void Main(string[] args)
         {
+            //Thread.Sleep(15000);
             var list = ReadlplFile(@"FB Alpha - Arcade Games.lpl");
             var invalidList = getInvalidateGames(list);
             if (invalidList.Count == 0)
             {
+                System.Console.WriteLine("list has games :" + list.Count.ToString());
                 var rs = cleanRomsByList(list, @".\\roms\\FBA");
                 System.Console.WriteLine("delete files :" + rs.ToString());
             }
             else
             {
-                System.Console.WriteLine("Not invalide games has :" + invalidList.Count.ToString());
+                System.Console.WriteLine("Not invalide games have :" + invalidList.Count.ToString());
                 foreach (var invalid in invalidList)
                 {
                     System.Console.WriteLine("error in Line:" + invalid.line_No.ToString());
