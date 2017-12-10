@@ -164,6 +164,12 @@ namespace Console
         //DETECT
         //64e58dc3|crc
         //FB Alpha - Arcade Games.lpl
+//第一行：/storage/roms/FBA/1941.zip 代表着这个ROM位于 /storage/roms/FBA/ 文件夹内，且ROM名字是1941.zip
+//第二行：1941反击战（世界版900227） 代表着这个游戏在主界面列表显示出来的内容，注意别用怪异的符号，尽量是中文、英语+数字
+//第三行：DETECT 是高级应用选填，意为指向特定路径的特定模拟器，大家默认DETECT这样子最好（某些游戏需要特定模拟器，就在这里指定模拟器so文件路径）
+//第四行：DETECT 也是高级应用选填，意为分类注释，建议默认为DETECT就是这样子就OK
+//第五行：2ad6ca92|crc 在|crc之前，就是对应的这个ROM的CRC32值，运行之前下载包里面的CRC32工具，把ROM文件拖进去就看得到
+//第六行：FB Alpha - Arcade Games.lpl 这是FBA模拟器的标准列表文件名，请别乱改，默认就是这样子
     }
 
 }
